@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="public/css/it.css">
+    <link rel="stylesheet" href="public/css/tp.css">
+    
+    <style>
+        @media(max-width:425px){
+            .form{
+                width: 325px;
+            }
+            #big h1{
+                font-family: cursive;
+                font-size: 56px;
+            }
+            #another h4{
+                font-size: 30px;
+                background-color: aliceblue;
+            }
+            #other{
+                font-family: cursive;
+            }
+            .form input,textarea{
+                width: 200px;
+                margin: auto;
+                padding: 3px;
+                margin: 12px;
+            }
+            .form input[type="submit"]{
+                width: 70px;
+                margin: auto;
+                margin-bottom: 12px;
+            }
+            .navi{
+                width: 98%;
+            }
+        }
+        
+    </style>
+</head>
+<script>
+
+    function yo() {
+        let act = document.forms["myform"]["name"]
+        let act1 = document.forms["myform"]["address"]
+        let act2 = document.forms["myform"]["phone"]
+        let act3 = document.forms["myform"]["email"]
+        let act4 = document.forms["myform"]["area"]
+        if (act.value=="" || act1.value=="" || act2.value=="" || act3.value=="" || act4.value=="") {
+            swal("Please enter your details completely")
+            
+        }
+        else if(act2.value.length !=10){
+            swal("Phone number must be 10 characters")
+            
+        }
+        // else if(act2.toString().length<10){
+        //     swal("Phone number must be 10 characters")
+            
+        // }
+        else {
+            swal("Good","your form has been submitted","success")
+
+        }
+    }
+
+</script>
+
+<body>
+    <nav class="navi vnav hnav">
+        <img src="/public/img/logo.png" alt="nope">
+        <a href="/">Home</a>
+        <a href="more.html">More</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+    </nav>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <section id="big">
+        <h1>
+            Contact us
+        </h1>
+
+    </section>
+    <section id="another">
+        <h4>
+            for any query free to contact us through mobile no. +919357893218 and via email tpalkhe648@gamil.com
+        </h4>
+    </section>
+    <section id="other">
+        Other ways to contact us
+    </section>
+    <div class="contal">
+        <div class="form">
+            <form action="j.php" id="contactForm" onsubmit="yo()" name="myform" method="dialog" >
+
+                <input type="text" name='name' id="name" placeholder="enter your name" >
+
+                <input type="text" name='address' id="address" placeholder="enter your address">
+                <input type="number" name='phone' id="phone" placeholder="enter your Phone no."><span class="formerror"></span>
+                <input type="email" name="email" id="email" placeholder="enter your email">
+                <textarea name="area" id="ur" cols="30"  rows="10" placeholder="About yourself"></textarea>
+                <input class="btn"  type="submit" value="submit">
+                    
+            </input>
+
+
+        </div>
+        <!-- <input type="reset" name="reset" class="op"> -->
+        </form>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/public/js/c.js"></script>
+    <script src="/public/js/form.js"></script>
+
+    <footer>
+        Copyright all rights reserved www.wallpaperzone.com
+    </footer>
+
+</body>
+
+</html>
